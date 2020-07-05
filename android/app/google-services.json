@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "118889713751",
+    "firebase_url": "https://buy-yo.firebaseio.com",
+    "project_id": "buy-yo",
+    "storage_bucket": "buy-yo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:118889713751:android:7445ec66f2250f42ccd312",
+        "android_client_info": {
+          "package_name": "com.kevinapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "118889713751-qo9d68f0st0g6jbarfip4a03q1slmc09.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0NdYpV8q5Xk1p8CNRVLUDItaMRykXFRg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "118889713751-qo9d68f0st0g6jbarfip4a03q1slmc09.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

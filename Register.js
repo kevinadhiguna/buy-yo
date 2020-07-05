@@ -1,9 +1,16 @@
 import React, { Component } from 'react'
-import { TextInput, StyleSheet, View, Image, Text, TouchableWithoutFeedback, TouchableOpacity,KeyboardAvoidingView } from 'react-native';
+import {TextInput,
+        StyleSheet, 
+        View, 
+        Image, 
+        Text, 
+        TouchableWithoutFeedback, 
+        TouchableOpacity,
+        KeyboardAvoidingView } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import { Button, Container, Card, Content, Form, Label, Root } from 'native-base';
 import LinearGradient from 'react-native-linear-gradient';
-import IconIonicons from 'react-native-vector-icons/Ionicons';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 
 const goToHome = () => {
    Actions.home()
@@ -43,7 +50,7 @@ export default class Register extends Component{
         let nameIsValid = re_name.test(this.state.name);
 
         if(this.state.name == ''){
-           this.setState({nameError: "Nama masih kosong nih, kaya hati aja ..."})
+           this.setState({nameError: "Nama masih kosong nih, isi dulu ya ..."})
         } else {
             if(!nameIsValid){
                 this.setState({nameError: "Isi nama lengkap sesuai KTP ya :)"})
@@ -120,9 +127,9 @@ export default class Register extends Component{
                     >
 
                         <View>    
-                            <IconIonicons 
+                            <AntDesign 
                                 onPress = {goToHome}
-                                name='ios-home'
+                                name='home'
                                 style={styles.homeIcon}/>
                         </View>
                         <View style={styles.judulPage} >
@@ -168,7 +175,7 @@ export default class Register extends Component{
                             </Form>
                             </KeyboardAvoidingView>
 
-                            <TouchableOpacity style={styles.regButton}>
+                            <TouchableOpacity style={styles.regButton} onPress={() => alert('Selamat, kamu telah terdaftar!') }>
                                 <Text style={styles.reg}>Register</Text>
                             </TouchableOpacity>
 
@@ -202,13 +209,14 @@ const styles = StyleSheet.create({
         borderBottomRightRadius: 150,
     },
     homeIcon: {
-        position: 'absolute',
-        right: 0,
-        fontSize: 30,
+        alignSelf: 'flex-end',
+        marginRight: 30,
+        fontSize: 25,
         color: 'white',
+        paddingTop: 10,
     },
     judulPage: {
-        marginTop: 15,
+        //marginTop: 1,
         marginLeft: 20,
     },
     title: {
@@ -224,7 +232,7 @@ const styles = StyleSheet.create({
     box: {
         borderRadius:10,
         padding:10,
-        marginBottom:20,
+        marginBottom: 60,
         marginLeft: 15,
         marginRight: 15,
         marginTop: -20,
@@ -245,7 +253,7 @@ const styles = StyleSheet.create({
         color: 'red',
     },
     textinput: {
-        borderColor: 'grey',
+        borderColor: '#e9e9e9',
         borderWidth: 2,
         height: 40,
         borderRadius: 10,
@@ -261,7 +269,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#296d98',
     },
     reg: {
-        fontFamily: 'Roboto-Bold',
+        fontFamily: 'Roboto-Regular',
         fontSize: 18,
         color: 'white',
     },
